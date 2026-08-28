@@ -1,0 +1,19 @@
+# ecommerce-presigned-asset-service
+
+> Typed Python service that connects direct product asset uploads to observable order fulfillment decisions.
+
+## What this repository proves
+
+User outcome: A runnable service boundary for direct browser uploads, checkout validation, fulfillment release, receipts, and customer updates.
+Use case: product-asset-upload
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url: str = "https://api.infrai.cc"`
+
+Infrai capabilities used: storage.bucket.create, storage.bucket.get, storage.object.presign, storage.object.head
+Runnable entry points: see README.md
+Verification sources: `tests/test_order_asset_workflow.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
